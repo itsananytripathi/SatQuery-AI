@@ -1,0 +1,90 @@
+# Keeps the profile from rotting: every SVG must stay valid XML, no file may
+# carry stray control characters, and every link and image in the README must
+# still resolve. Read-only.
+
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Weekly, to catch demo deployments or repositories that disappear.
+    - cron: "41 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  assets:
+    name: Validate assets
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v5
+
+      - name: SVG assets are well-formed XML
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq libxml2-utils
+          shopt -s nullglob
+          found=0
+          for f in assets/*.svg; do
+            xmllint --noout "$f"
+            echo "valid  $f"
+            found=1
+          done
+          if [ "$found" -eq 0 ]; then
+            echo "::error::no SVG assets found; the profile expects hand-built assets in assets/"
+            exit 1
+          fi
+
+      - name: No stray control characters
+        run: |
+          set -euo pipefail
+          status=0
+          while IFS= read -r -d '' f; do
+            if LC_ALL=C tr -d '\011\012\015\040-\377' < "$f" | grep -q .; then
+              echo "::error file=$f::contains control characters that break XML or Markdown rendering"
+              status=1
+            fi
+          done < <(find . -path ./.git -prune -o \( -name '*.svg' -o -name '*.md' \) -print0)
+          exit "$status"
+
+  links:
+    name: Verify README links
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v5
+
+      - name: Every URL resolves
+        run: |
+          set -uo pipefail
+          status=0
+          urls="$(grep -ohE 'https?://[^ )"'"'"'<>]+' README.md | sed 's/[.,]*$//' | sort -u)"
+          while IFS= read -r url; do
+            [ -n "$url" ] || continue
+            case "$url" in
+              # LinkedIn answers automated requests with 999 by design.
+              *linkedin.com*) echo "skip   (bot-blocked)  $url"; continue ;;
+            esac
+            code="$(curl -sSL -o /dev/null -w '%{http_code}' --max-time 30 --retry 2 --retry-delay 3 "$url" || echo 000)"
+            if [ "$code" = "000" ] || [ "$code" -ge 400 ]; then
+              echo "::error::HTTP $code  $url"
+              status=1
+            else
+              echo "ok     $code  $url"
+            fi
+          done <<< "$urls"
+          exit "$status"
