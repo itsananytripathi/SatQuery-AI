@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Check out profile repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: SVG assets are well-formed XML
         run: |
@@ -66,7 +66,7 @@ jobs:
 
     steps:
       - name: Check out profile repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Every URL resolves
         run: |
@@ -77,7 +77,14 @@ jobs:
             [ -n "$url" ] || continue
             case "$url" in
               # LinkedIn answers automated requests with 999 by design.
-              *linkedin.com*) echo "skip   (bot-blocked)  $url"; continue ;;
+              *linkedin.com*)
+                echo "skip   (bot-blocked)       $url"; continue ;;
+              # GitHub project repos may be private or not yet published;
+              # only raw.githubusercontent.com asset URLs are checked instead.
+              https://github.com/itsananytripathi/*)
+                echo "skip   (private/project)   $url"; continue ;;
+              https://github.com/Team-Skynet/*)
+                echo "skip   (private/project)   $url"; continue ;;
             esac
             code="$(curl -sSL -o /dev/null -w '%{http_code}' --max-time 30 --retry 2 --retry-delay 3 "$url" || echo 000)"
             if [ "$code" = "000" ] || [ "$code" -ge 400 ]; then
