@@ -7,7 +7,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { generateSnakeAnimation } from "./snake-engine.mjs";
 
-const username = process.env.GITHUB_USER ?? "Sai-Vidyut";
+const username = process.env.GITHUB_USER ?? "itsananytripathi";
 const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN;
 
 if (!token) {

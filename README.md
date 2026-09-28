@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sai-Vidyut/Sai-Vidyut/main/assets/hero-dark.svg">
-  <img alt="Sai Vidyut C — The model interprets. The code decides. Five products built since March 2026: Clip Management System, SatQuery AI, RazorFlow, DocNA, BluePrint." src="https://raw.githubusercontent.com/Sai-Vidyut/Sai-Vidyut/main/assets/hero-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/itsananytripathi/SatQuery-AI/main/assets/hero-dark.svg">
+  <img alt="Anany Tripathi — The model interprets. The code decides. Five products built since March 2026: Clip Management System, SatQuery AI, RazorFlow, DocNA, BluePrint." src="https://raw.githubusercontent.com/itsananytripathi/SatQuery-AI/main/assets/hero-light.svg" width="100%">
 </picture>
 
 I build AI products where the model is one component, not the architecture. The interesting part is never the prompt — it's the boundary I put around it.
@@ -10,11 +10,11 @@ I build AI products where the model is one component, not the architecture. The 
 <table>
 <tr><td>
 
-#### SatQuery AI &nbsp;<sup>[repo](https://github.com/Sai-Vidyut/SatQuery-AI) · [live](https://sat-query-ai-self.vercel.app)</sup>
+#### SatQuery AI &nbsp;<sup>[repo](https://github.com/itsananytripathi/SatQuery-AI) · [live](https://sat-query-ai-self.vercel.app)</sup>
 
 Ask questions about satellite imagery in plain language and get answers you can inspect on the map.
 
-<img src="https://raw.githubusercontent.com/Sai-Vidyut/Sai-Vidyut/main/assets/satquery-workstation.jpg" width="100%" alt="The SatQuery workstation: satellite imagery over Bengaluru with a drawn 5.3 square kilometre area of interest, a plain-language question in the composer, and the AOI, upload, temporal-pair and cross-modal analysis modes.">
+<img src="https://raw.githubusercontent.com/itsananytripathi/SatQuery-AI/main/assets/satquery-workstation.jpg" width="100%" alt="The SatQuery workstation: satellite imagery over Bengaluru with a drawn 5.3 square kilometre area of interest, a plain-language question in the composer, and the AOI, upload, temporal-pair and cross-modal analysis modes.">
 
 **Why it exists** — Imagery tools hand analysts a summary and ask them to trust it. Before you act on "construction started here," you need to see which pixels said so.
 
@@ -30,11 +30,11 @@ Ask questions about satellite imagery in plain language and get answers you can 
 <table>
 <tr><td>
 
-#### RazorFlow &nbsp;<sup>[repo](https://github.com/Sai-Vidyut/RazorFlow)</sup>
+#### RazorFlow &nbsp;<sup>[repo](https://github.com/itsananytripathi/RazorFlow)</sup>
 
 A merchant commerce agent that turns buyer intent into a policy-governed sale. Not a chatbot.
 
-<img src="https://raw.githubusercontent.com/Sai-Vidyut/Sai-Vidyut/main/assets/razorflow-admin.jpg" width="100%" alt="The RazorFlow merchant control plane: captured GMV, order and payment counters including policy blocks, and an audit trail of agent decisions, policy evaluations, checkouts and Razorpay outcomes.">
+<img src="https://raw.githubusercontent.com/itsananytripathi/SatQuery-AI/main/assets/razorflow-admin.jpg" width="100%" alt="The RazorFlow merchant control plane: captured GMV, order and payment counters including policy blocks, and an audit trail of agent decisions, policy evaluations, checkouts and Razorpay outcomes.">
 
 **Why it exists** — A model that can name products can also invent prices, undercut margin, and sell past a merchant's order cap. No merchant can ship that.
 
@@ -50,7 +50,7 @@ A merchant commerce agent that turns buyer intent into a policy-governed sale. N
 <table>
 <tr><td>
 
-#### DocNA &nbsp;<sup>[repo](https://github.com/Sai-Vidyut/Project-DocNA)</sup>
+#### DocNA &nbsp;<sup>[repo](https://github.com/itsananytripathi/Project-DocNA)</sup>
 
 Finds the questions and blanks in a Word document, answers them, and writes back surgically.
 
@@ -68,11 +68,11 @@ Finds the questions and blanks in a Word document, answers them, and writes back
 <table>
 <tr><td>
 
-#### BluePrint &nbsp;<sup>[repo](https://github.com/Sai-Vidyut/project-blueprint) · [live](https://project-blueprint-eight.vercel.app)</sup>
+#### BluePrint &nbsp;<sup>[repo](https://github.com/itsananytripathi/project-blueprint) · [live](https://project-blueprint-eight.vercel.app)</sup>
 
 Describe a software idea, get a developer-grade implementation plan — architecture, schema, endpoints, roadmap.
 
-<img src="https://raw.githubusercontent.com/Sai-Vidyut/Sai-Vidyut/main/assets/blueprint-diagram.jpg" width="100%" alt="A generated blueprint for a restaurant inventory system, showing in-scope and out-of-scope MVP items above a rendered system diagram of the frontend, API service and database layer.">
+<img src="https://raw.githubusercontent.com/itsananytripathi/SatQuery-AI/main/assets/blueprint-diagram.jpg" width="100%" alt="A generated blueprint for a restaurant inventory system, showing in-scope and out-of-scope MVP items above a rendered system diagram of the frontend, API service and database layer.">
 
 **Why it exists** — Planning is the slowest part of starting a build and the part least often written down.
 
@@ -90,8 +90,8 @@ Describe a software idea, get a developer-grade implementation plan — architec
 Three of those products are the same idea wearing different clothes.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sai-Vidyut/Sai-Vidyut/main/assets/pattern-dark.svg">
-  <img alt="One pattern, three products. RazorFlow: buyer intent in plain language, Gemini extracts a structured intent, the contract is category, budget, exclusions and mode, then a catalog engine ranks and policy caps the offer. DocNA: questions and blanks in a .docx, AI writes the answer text only, the contract is typed PlacementOp values, then an OOXML adapter edits a copy rather than the original. BluePrint: a one-line product idea, the model returns a structured plan, the contract is a Zod schema, then a Mermaid diagram is built from the plan data." src="https://raw.githubusercontent.com/Sai-Vidyut/Sai-Vidyut/main/assets/pattern-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/itsananytripathi/SatQuery-AI/main/assets/pattern-dark.svg">
+  <img alt="One pattern, three products. RazorFlow: buyer intent in plain language, Gemini extracts a structured intent, the contract is category, budget, exclusions and mode, then a catalog engine ranks and policy caps the offer. DocNA: questions and blanks in a .docx, AI writes the answer text only, the contract is typed PlacementOp values, then an OOXML adapter edits a copy rather than the original. BluePrint: a one-line product idea, the model returns a structured plan, the contract is a Zod schema, then a Mermaid diagram is built from the plan data." src="https://raw.githubusercontent.com/itsananytripathi/SatQuery-AI/main/assets/pattern-light.svg" width="100%">
 </picture>
 
 <br>
@@ -108,11 +108,11 @@ Three of those products are the same idea wearing different clothes.
 
 Smaller things I build to answer a question I actually have.
 
-**[Clip Management System](https://github.com/Sai-Vidyut/clip-management-system)** — My first full-stack media app: upload video clips, extract metadata with ExifTool, generate thumbnails with FFmpeg, and store everything in Azure Blob Storage. FastAPI and SQLAlchemy on the backend; React, Vite, and TanStack Query on the front. Built March 2026, published September 2026.
+**[Clip Management System](https://github.com/itsananytripathi/clip-management-system)** — My first full-stack media app: upload video clips, extract metadata with ExifTool, generate thumbnails with FFmpeg, and store everything in Azure Blob Storage. FastAPI and SQLAlchemy on the backend; React, Vite, and TanStack Query on the front. Built March 2026, published September 2026.
 
-**GeoChat on Colab** — A self-contained notebook that supervises a GPU inference service for the 7B vision model, hardened against OOM during model load and against stale exit-file races when the service restarts. Lives inside [SatQuery AI](https://github.com/Sai-Vidyut/SatQuery-AI).
+**GeoChat on Colab** — A self-contained notebook that supervises a GPU inference service for the 7B vision model, hardened against OOM during model load and against stale exit-file races when the service restarts. Lives inside [SatQuery AI](https://github.com/itsananytripathi/SatQuery-AI).
 
-**[Instagram Dashboard](https://github.com/Sai-Vidyut/Instagram-Dashboard)** — My first pass at keeping an integration boundary honest: routes, services, and repositories are separated so the mock Composio layer can be replaced with live SDK calls without the API contract moving. [Live](https://instagram-dashboard-pearl.vercel.app).
+**[Instagram Dashboard](https://github.com/itsananytripathi/Instagram-Dashboard)** — My first pass at keeping an integration boundary honest: routes, services, and repositories are separated so the mock Composio layer can be replaced with live SDK calls without the API contract moving. [Live](https://instagram-dashboard-pearl.vercel.app).
 
 <br>
 
@@ -147,4 +147,4 @@ correctness       Zod · Vitest · Playwright · pytest
 
 ### `07` &nbsp;Contact
 
-[saividyut4@gmail.com](mailto:saividyut4@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/sai-vidyut-chandramohan-584473406/)
+[anany.tripathivns@gmail.com](mailto:anany.tripathivns@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/itsananytripathi/)
