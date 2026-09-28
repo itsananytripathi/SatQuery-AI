@@ -10,7 +10,7 @@ I build AI products where the model is one component, not the architecture. The 
 <table>
 <tr><td>
 
-#### SatQuery AI &nbsp;<sup>[repo](https://github.com/itsananytripathi/SatQuery-AI) · [live](https://sat-query-ai-self.vercel.app)</sup>
+#### SatQuery AI &nbsp;<sup>[repo](https://github.com/Team-Skynet/SatQuery-AI) · [live](https://sat-query-ai-self.vercel.app)</sup>
 
 Ask questions about satellite imagery in plain language and get answers you can inspect on the map.
 
@@ -110,7 +110,7 @@ Smaller things I build to answer a question I actually have.
 
 **[Clip Management System](https://github.com/itsananytripathi/clip-management-system)** — My first full-stack media app: upload video clips, extract metadata with ExifTool, generate thumbnails with FFmpeg, and store everything in Azure Blob Storage. FastAPI and SQLAlchemy on the backend; React, Vite, and TanStack Query on the front. Built March 2026, published September 2026.
 
-**GeoChat on Colab** — A self-contained notebook that supervises a GPU inference service for the 7B vision model, hardened against OOM during model load and against stale exit-file races when the service restarts. Lives inside [SatQuery AI](https://github.com/itsananytripathi/SatQuery-AI).
+**GeoChat on Colab** — A self-contained notebook that supervises a GPU inference service for the 7B vision model, hardened against OOM during model load and against stale exit-file races when the service restarts. Lives inside [SatQuery AI](https://github.com/Team-Skynet/SatQuery-AI).
 
 **[Instagram Dashboard](https://github.com/itsananytripathi/Instagram-Dashboard)** — My first pass at keeping an integration boundary honest: routes, services, and repositories are separated so the mock Composio layer can be replaced with live SDK calls without the API contract moving. [Live](https://instagram-dashboard-pearl.vercel.app).
 
@@ -147,4 +147,4 @@ correctness       Zod · Vitest · Playwright · pytest
 
 ### `07` &nbsp;Contact
 
-[anany.tripathivns@gmail.com](mailto:anany.tripathivns@gmail.com) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/itsananytripathi/)
+[anany.tripathivns@gmail.com](mailto:anany.tripathivns@gmail.com) &nbsp;·&nbsp; [GitHub](https://github.com/itsananytripathi) &nbsp;·&nbsp; [Team-Skynet](https://github.com/Team-Skynet) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/itsananytripathi/)
